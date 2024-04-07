@@ -130,12 +130,9 @@
     audio.volume = 0.25; // Adjust the volume level here
 
     // When the user clicks on <span> (x) or outside the modal, close the modal and play the audio
-    window.onclick = function(event) {
-    if (event.target == modal || event.target == modal.querySelector('.modal-content')) {
-        modal.style.display = "none";
+    $('#videoModal').on('hidden.bs.modal', function () {
         audio.play();
-    }
-    }
+      });
     
 })(jQuery);
 
