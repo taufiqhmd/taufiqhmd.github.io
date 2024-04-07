@@ -55,7 +55,50 @@
     </nav>
     <!-- Navbar End -->
 
-
+    <!-- The Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>        
+                    <div class="container py-5">
+                        <div class="section-title position-relative text-center">
+                            <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Undangan Pernikahan</h6>
+                            <h1 class="font-secondary display-4">Paramita & Taufiq</h1>
+                            <i class="far fa-heart text-dark"></i>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="text-center">
+                                    <form>
+                                        <div>
+                                            <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit" class="close" data-dismiss="modal">Buka Undangan</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Welcome to Our Website!</h2>
+            <p>This is a blocking modal with a big button to close it. Click the button below to start playing audio.</p>
+            <button onclick="playAudio()">Close Modal and Play Audio</button>
+        </div>
+    </div> -->
+    
+  <audio id="myAudio" controls style="display:none;">
+    <source src="music/bg-music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  
     <!-- Carousel Start -->
     <div class="container-fluid p-0 mb-5 pb-5" id="home">
         <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
@@ -107,21 +150,20 @@
 
 
     <!-- Video Modal Start -->
-    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-body">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>        
-                    <!-- 16:9 aspect ratio -->
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- Video Modal End -->
 
 

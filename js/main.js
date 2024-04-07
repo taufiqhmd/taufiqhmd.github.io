@@ -29,21 +29,22 @@
 
 
     // Modal Video
-    $(document).ready(function () {
-        var $videoSrc;
-        $('.btn-play').click(function () {
-            $videoSrc = $(this).data("src");
-        });
-        console.log($videoSrc);
+    // $(document).ready(function () {
+    //     var $videoSrc;
+    //     $('.btn-play').click(function () {
+    //         $videoSrc = $(this).data("src");
+    //     });
+    //     console.log($videoSrc);
+    //     playAudio();
 
-        $('#videoModal').on('shown.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-        })
+    //     $('#videoModal').on('shown.bs.modal', function (e) {
+    //         $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+    //     })
 
-        $('#videoModal').on('hide.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc);
-        })
-    });
+    //     $('#videoModal').on('hide.bs.modal', function (e) {
+    //         $("#video").attr('src', $videoSrc);
+    //     })
+    // });
 
 
     // Scroll to Bottom
@@ -112,6 +113,29 @@
             }
         }
     });
+
+    // Get the modal
+    var modal = document.getElementById("videoModal");
+    var audio = document.getElementById("myAudio");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the page loads, show the modal
+    window.onload = function() {
+        $('#videoModal').modal('show');
+    }
+
+    // Set the volume level (0.0 - 1.0)
+    audio.volume = 0.25; // Adjust the volume level here
+
+    // When the user clicks on <span> (x) or outside the modal, close the modal and play the audio
+    window.onclick = function(event) {
+    if (event.target == modal || event.target == modal.querySelector('.modal-content')) {
+        modal.style.display = "none";
+        audio.play();
+    }
+    }
     
 })(jQuery);
 
