@@ -127,7 +127,7 @@
     }
 
     // Set the volume level (0.0 - 1.0)
-    audio.volume = 0.25; // Adjust the volume level here
+    audio.volume = 0.1; // Adjust the volume level here
 
     // When the user clicks on <span> (x) or outside the modal, close the modal and play the audio
     $('#videoModal').on('hidden.bs.modal', function () {
