@@ -16,7 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet"> 
 
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -46,9 +46,9 @@
                 <h1 class="font-secondary text-white mb-n2">Taufiq <span class="text-primary">&</span> Paramita</h1>
             </a>
             <div class="navbar-nav mr-auto py-0">
-                <a href="#family" class="nav-item nav-link">Family</a>
                 <a href="#event" class="nav-item nav-link">Event</a>
-                <a href="#rsvp" class="nav-item nav-link">RSVP</a>
+                <a href="#family" class="nav-item nav-link">Family</a>
+                <a href="#rsvp" class="nav-item nav-link">Gift</a>
                 <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
         </div>
@@ -65,16 +65,26 @@
                     </button>        
                     <div class="container py-5">
                         <div class="section-title position-relative text-center">
-                            <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Undangan Pernikahan</h6>
+                            <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Wedding Invitation</h6>
                             <h1 class="font-secondary display-4">Taufiq & Paramita</h1>
                             <i class="far fa-heart text-dark"></i>
                         </div>
                         <div class="row justify-content-center">
                             <div class="col-lg-8">
                                 <div class="text-center">
+                                    <div class="bg-secondary text-center p-4">
+                                        <h6 class="text-primary mb-3" style="letter-spacing: 3px;">To: Mr./Ms./Mrs.</h6>
+                                        <h4 class="mb-3"><?php if(isset($_GET['to'])){echo $_GET['to'];} else {echo "Tamu Undangan";} ?></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <div class="text-center">
                                     <form>
                                         <div>
-                                            <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit" class="close" data-dismiss="modal" onclick="playAudio()">Buka Undangan</button>
+                                            <button class="btn btn-primary font-weight-bold py-3 px-5" type="submit" class="close" data-dismiss="modal" onclick="playAudio()">Open Invitation</button>
                                         </div>
                                     </form>
                                 </div>
@@ -111,10 +121,10 @@
                             <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
                                 <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">We're getting married</h3>
                             </div>
-                            <button type="button" class="btn-play mx-auto" data-toggle="modal"
+                            <!-- <button type="button" class="btn-play mx-auto" data-toggle="modal"
                                 data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
                                 <span></span>
-                            </button>
+                            </button> -->
                         </div>
                     </div>
                 </div>
@@ -126,10 +136,10 @@
                             <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
                                 <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">We're getting married</h3>
                             </div>
-                            <button type="button" class="btn-play mx-auto" data-toggle="modal"
+                            <!-- <button type="button" class="btn-play mx-auto" data-toggle="modal"
                                 data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
                                 <span></span>
-                            </button>
+                            </button> -->
                         </div>
                     </div>
                 </div>
@@ -179,13 +189,12 @@
                 <div class="col-md-6 p-0 text-center text-md-right">
                     <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
                         <h3 class="mb-3">The Groom</h3>
-                        <p>Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
+                        <p>The youngest of three siblings. Son of father Sunarto, A.Ht, and mother Purwatiningsih.</p>
                         <h3 class="font-secondary font-weight-normal text-muted mb-3"><i class="fa fa-male text-primary pr-3"></i>Taufiq Hamidhi, S.Kom.</h3>
                         <div class="position-relative">
-                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-primary btn-square mr-1" target="_blank" href="https://www.instagram.com/taufiqhmd/"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-primary btn-square mr-1" target="_blank" href="https://www.facebook.com/taufiq.hamidhi/"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-primary btn-square mr-1" target="_blank" href="https://www.linkedin.com/in/taufiq-hamidhi-6527b611a/"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
@@ -200,13 +209,13 @@
                 <div class="col-md-6 p-0 text-center text-md-left">
                     <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
                         <h3 class="mb-3">The Bride</h3>
-                        <p>Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
+                        <p>The eldest son of two siblings. Daughter of the late Mr. Agus Subekti and the late Mrs. Langgeng S. Wurini.</p>
                         <h3 class="font-secondary font-weight-normal text-muted mb-3"><i class="fa fa-female text-primary pr-3"></i>Paramita Daniswari, S.Kom.</h3>
                         <div class="position-relative">
-                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a class="btn btn-outline-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-primary btn-square mr-1" target="_blank" href="https://www.instagram.com/daniswari.paramita/"><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-primary btn-square mr-1" target="_blank" href="https://github.com/danisw"><i class="fa-brands fa-github"></i></a>
+                            <a class="btn btn-outline-primary btn-square mr-1" target="_blank" href="https://www.linkedin.com/in/paramita-daniswari-271619144/"><i class="fab fa-linkedin-in"></i></a>
+                            
                         </div>
                     </div>
                 </div>
@@ -232,17 +241,17 @@
                     <div class="col-md-6 text-center text-md-left">
                         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
                             <h4 class="mb-2">First Meet</h4>
-                            <p class="text-uppercase mb-2">01 Jan 2050</p>
-                            <p class="m-0">Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
+                            <p class="text-uppercase mb-2">November 1st, 2019</p>
+                            <p class="m-0">In 2019, amidst the bustling corridors of ITS, we crossed paths as new colleagues. Each of us was already committed to another. Little did we know that four years hence, we would walk the path of singledom, only to find our hearts intertwined in the most unexpected of romances.</p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 text-center text-md-right">
                         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
-                            <h4 class="mb-2">First Date</h4>
-                            <p class="text-uppercase mb-2">01 Jan 2050</p>
-                            <p class="m-0">Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
+                            <h4 class="mb-2">Opening A New Chapter</h4>
+                            <p class="text-uppercase mb-2">End of 2022</p>
+                            <p class="m-0">In 2022 we were brought together as a team in the ITSProvement Competition. Through shared struggles, we discovered harmony with each other and embarked on our journey of love together in 2023.</p>
                         </div>
                     </div>
                     <div class="col-md-6 text-center text-md-left">
@@ -255,22 +264,22 @@
                     </div>
                     <div class="col-md-6 text-center text-md-left">
                         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
-                            <h4 class="mb-2">Proposal</h4>
-                            <p class="text-uppercase mb-2">01 Jan 2050</p>
-                            <p class="m-0">Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
+                            <h4 class="mb-2">Weathering The Storm</h4>
+                            <p class="text-uppercase mb-2">2023</p>
+                            <p class="m-0">Our relationship endured through challenging times. Yet, with every obstacle we faced, our bond continued to flourish, granting us the sacred ground to blossom personally and romantically.</p>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6 text-center text-md-right">
                         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
-                            <h4 class="mb-2">Enagagement</h4>
-                            <p class="text-uppercase mb-2">01 Jan 2050</p>
-                            <p class="m-0">Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
+                            <h4 class="mb-2">Engagement</h4>
+                            <p class="text-uppercase mb-2">February 17th, 2024</p>
+                            <p class="m-0">In February 2024, we solidified the seriousness of our relationship with an engagement ceremony, marking a significant step in our journey of love filled with commitment and the growing happiness shared between us.</p>
                         </div>
                     </div>
                     <div class="col-md-6 text-center text-md-left">
-                        <img class="img-fluid ml-md-3" src="img/story-4.jpg" alt="">
+                        <img class="img-fluid ml-md-3" src="img/story-42.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -338,24 +347,27 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center">
-                    <h5 class="font-weight-normal text-muted mb-3 pb-3">Clita ipsum aliquyam dolor diam dolores elitr nonumy. Rebum sea vero ipsum eirmod tempor kasd. Diam amet lorem erat eos sit lorem elitr justo</h5>
+                    <h5 class="font-weight-normal text-muted mb-3 pb-3">"And among His signs is that He created for you wives from among yourselves, that you may find tranquility in them, and He has put between you love and mercy. Verily, in that are signs for a people who reflect."</h5>
+                    <h6 class="font-weight-normal text-muted mb-3 pb-3">Qur'an Ar-Rum : 21</h6>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 border-right border-primary">
                     <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
-                        <img class="img-fluid mb-4" src="img/event-1.jpg" alt="">
-                        <h4 class="mb-3">The Reception</h4>
-                        <p class="mb-2">123 Street, New York, USA</p>
-                        <p class="mb-0">12:00AM - 13:00PM</p>
+                        <!-- <img class="img-fluid mb-4" src="img/event-1.jpg" alt=""> -->
+                        <h4 class="mb-3">Akad Nikah</h4>
+                        <p class="mb-2"><b>Gedung Perum Perhutani East Java Regional Division</b></p>
+                        <p class="mb-2">Jl. Genteng Kali No.49, Genteng, Surabaya, Jawa Timur 60275</p>
+                        <p class="mb-0">08.00 AM - 09.00 AM</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="text-center text-md-left ml-md-3">
-                        <img class="img-fluid mb-4" src="img/event-2.jpg" alt="">
-                        <h4 class="mb-3">Wedding Party</h4>
-                        <p class="mb-2">123 Street, New York, USA</p>
-                        <p class="mb-0">12:00AM - 13:00PM</p>
+                        <!-- <img class="img-fluid mb-4" src="img/event-2.jpg" alt=""> -->
+                        <h4 class="mb-3">The Reception</h4>
+                        <p class="mb-2"><b>Gedung Perum Perhutani East Java Regional Division</b></p>
+                        <p class="mb-2">Jl. Genteng Kali No.49, Genteng, Surabaya, Jawa Timur 60275</p>
+                        <p class="mb-0">10.00 AM - 12.00 PM</p>
                     </div>
                 </div>
             </div>
@@ -368,15 +380,15 @@
     <div class="container-fluid py-5" id="family">
         <div class="container pt-5 pb-3">
             <div class="section-title position-relative text-center">
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Friends & Family</h6>
-                <h1 class="font-secondary display-4">Groomsmen & Bridesmaid</h1>
+                <!--h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Family</h6--->
+                <h1 class="font-secondary display-4">Family</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
             <div class="row">
                 <div class="col-12 text-center mb-2">
                     <ul class="list-inline mb-4" id="portfolio-flters">
-                        <li class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4" data-filter=".first">Groomsmen</li>
-                        <li class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4" data-filter=".second">Bridesmaid</li>
+                        <li class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4" data-filter=".first">Grooms Family</li>
+                        <li class="btn btn-outline-primary font-weight-bold m-1 py-2 px-4" data-filter=".second">Brides Family</li>
                     </ul>
                 </div>
             </div>
@@ -385,14 +397,8 @@
                     <div class="position-relative mb-2">
                         <img class="img-fluid w-100" src="img/groomsmen-1.jpg" alt="">
                         <div class="bg-secondary text-center p-4">
-                            <h4 class="mb-3">Full Name</h4>
-                            <p class="text-uppercase">Best Friend</p>
-                            <div class="d-inline-block">
-                                <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
+                            <h4 class="mb-3">Mr. Sunarto, A.Ht & Mrs. Purwatiningsih</h4>
+                            <p class="text-uppercase">Parents</p>
                         </div>
                     </div>
                 </div>
@@ -400,14 +406,9 @@
                     <div class="position-relative mb-2">
                         <img class="img-fluid w-100" src="img/bridesmaid-1.jpg" alt="">
                         <div class="bg-secondary text-center p-4">
-                            <h4 class="mb-3">Full Name</h4>
-                            <p class="text-uppercase">Best Friend</p>
-                            <div class="d-inline-block">
-                                <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
+                            <h4 class="mb-3">Mr. Agus & Mrs. Rini</h4>
+                            <p class="text-uppercase">Parents</p>
+                            
                         </div>
                     </div>
                 </div>
@@ -415,14 +416,9 @@
                     <div class="position-relative mb-2">
                         <img class="img-fluid w-100" src="img/groomsmen-2.jpg" alt="">
                         <div class="bg-secondary text-center p-4">
-                            <h4 class="mb-3">Full Name</h4>
-                            <p class="text-uppercase">Best Friend</p>
-                            <div class="d-inline-block">
-                                <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
+                            <h4 class="mb-3">Mrs. Wiyan and Family</h4>
+                            <p class="text-uppercase">Siblings</p>
+                            
                         </div>
                     </div>
                 </div>
@@ -430,14 +426,8 @@
                     <div class="position-relative mb-2">
                         <img class="img-fluid w-100" src="img/bridesmaid-2.jpg" alt="">
                         <div class="bg-secondary text-center p-4">
-                            <h4 class="mb-3">Full Name</h4>
-                            <p class="text-uppercase">Best Friend</p>
-                            <div class="d-inline-block">
-                                <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
+                            <h4 class="mb-3">Mrs. Sumini</h4>
+                            <p class="text-uppercase">Grandma</p>
                         </div>
                     </div>
                 </div>
@@ -445,14 +435,8 @@
                     <div class="position-relative mb-2">
                         <img class="img-fluid w-100" src="img/groomsmen-3.jpg" alt="">
                         <div class="bg-secondary text-center p-4">
-                            <h4 class="mb-3">Full Name</h4>
-                            <p class="text-uppercase">Best Friend</p>
-                            <div class="d-inline-block">
-                                <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
+                            <h4 class="mb-3">Mrs. Ririn and Family</h4>
+                            <p class="text-uppercase">Siblings</p>
                         </div>
                     </div>
                 </div>
@@ -460,12 +444,9 @@
                     <div class="position-relative mb-2">
                         <img class="img-fluid w-100" src="img/bridesmaid-3.jpg" alt="">
                         <div class="bg-secondary text-center p-4">
-                            <h4 class="mb-3">Full Name</h4>
-                            <p class="text-uppercase">Best Friend</p>
+                            <h4 class="mb-3">Ega</h4>
+                            <p class="text-uppercase">Sibling</p>
                             <div class="d-inline-block">
-                                <a class="mx-2" href="#"><i class="fab fa-twitter"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a class="mx-2" href="#"><i class="fab fa-linkedin-in"></i></a>
                                 <a class="mx-2" href="#"><i class="fab fa-instagram"></i></a>
                             </div>
                         </div>
@@ -479,13 +460,14 @@
 
     <!-- RSVP Start -->
     <div class="container-fluid py-5" id="rsvp">
-        <div class="container py-5">
+         <div class="container py-5">
             <div class="section-title position-relative text-center">
-                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">RSVP</h6>
-                <h1 class="font-secondary display-4">Join Our Party</h1>
+                <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Gift</h6>
+                <h1 class="font-secondary display-4">Digital Gift</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
-            <div class="row justify-content-center">
+
+            <!--div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="text-center">
                         <form>
@@ -524,8 +506,8 @@
                         </form>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div> -->
+        </div> 
     </div>
     <!-- RSVP End -->
 
@@ -537,7 +519,7 @@
                 <h1 class="font-secondary display-3 text-white">Thank You</h1>
                 <i class="far fa-heart text-white"></i>
             </div>
-            <div class="d-flex justify-content-center mb-4">
+            <!-- <div class="d-flex justify-content-center mb-4">
                 <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
                 <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
                 <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -549,7 +531,7 @@
                 <p class="text-white" href="#">+012 345 6789</p>
             </div>
             <p class="m-0">&copy; <a class="text-primary" href="#">Domain Name</a>. Designed by <a class="text-primary" href="https://htmlcodex.com">HTML Codex</a>
-            </p>
+            </p> -->
         </div>
     </div>
     <!-- Footer End -->
