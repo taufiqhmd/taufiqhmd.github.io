@@ -59,8 +59,13 @@
         // Get the value of GET parameter named 'value'
         var getValue = getParameterByName('to');
 
-        // Append the value to a div with ID 'result'
-        $('#tamu_name').text(getValue);
+        // Check if the parameter 'value' exists
+        if (getValue !== null) {
+            // Replace the content of the div with ID 'result' with the retrieved value
+            $('#tamu_name').text(getValue);
+        } 
+
+        
     });
 
 

@@ -477,6 +477,45 @@
                 <h1 class="font-secondary display-4">Digital Gift</h1>
                 <i class="far fa-heart text-dark"></i>
             </div>
+            <div class="row">
+                <div class="col-md-6 border-right border-primary">
+                    <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">
+                        <!-- <img class="img-fluid mb-4" src="img/event-1.jpg" alt=""> -->
+                        <h4 class="mb-3">Bank Mandiri</small></h4>
+                        <p id="rekening_mandiri" class="mb-2">1420014958309</p>
+                        <p class="mb-2">a/n <b>Taufiq Hamidhi</b></p>
+                        <h4 class="mb-3"><button class="copy-btn" onclick="copyRekening('rekening_mandiri')">Salin</button></h4>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-center text-md-left ml-md-3">
+                        <!-- <img class="img-fluid mb-4" src="img/event-2.jpg" alt=""> -->
+                        <h4 class="mb-3">Bank BCA</h4>
+                        <p id="rekening_bca" class="mb-2">1300223776</p>
+                        <p class="mb-2">a/n <b>Paramita Daniswari</b></p>
+                        <h4 class="mb-3"><button class="copy-btn" onclick="copyRekening('rekening_bca')">Salin</button></h4>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row justify-content-center">
+                <div>
+                    <button class="copy-btn" onclick="copyRekening('rekening_mandiri')">Salin</button>
+                    <img src="img/bank-mandiri.webp" alt="Logo Bank Mandiri" class="bank-logo">
+                    Bank Mandiri:
+                    <span id="rekening_mandiri" contenteditable="false">1231</span>
+                    <span contenteditable="false">a/n Taufiq Hamidhi</span>
+                </div>
+            </div>
+            <br>
+            <div class="row justify-content-center">
+                <div>
+                    <button class="copy-btn" onclick="copyRekening('rekening_bca')">Salin</button>
+                    <img src="img/bank-bca.webp" alt="Logo Bank BCA" class="bank-logo">
+                    Bank BCA:
+                    <span id="rekening_bca" contenteditable="false">1300223776</span>
+                    <span contenteditable="false">a/n Paramita Daniswari</span>
+                </div>
+            </div> -->
 
             <!--div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -572,6 +611,18 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        function copyRekening(bank) {
+            var rekeningElement = document.getElementById(bank);
+            var range = document.createRange();
+            range.selectNode(rekeningElement);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand("copy");
+            window.getSelection().removeAllRanges();
+            alert("Nomor rekening telah disalin!");
+        }
+    </script>
 </body>
 
 </html>
