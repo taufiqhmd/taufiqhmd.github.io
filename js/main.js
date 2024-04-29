@@ -29,7 +29,7 @@
 
 
     // Modal Video
-    // $(document).ready(function () {
+    $(document).ready(function () {
     //     var $videoSrc;
     //     $('.btn-play').click(function () {
     //         $videoSrc = $(this).data("src");
@@ -44,7 +44,24 @@
     //     $('#videoModal').on('hide.bs.modal', function (e) {
     //         $("#video").attr('src', $videoSrc);
     //     })
-    // });
+
+        // Function to get GET parameter by name
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        // Get the value of GET parameter named 'value'
+        var getValue = getParameterByName('to');
+
+        // Append the value to a div with ID 'result'
+        $('#tamu_name').text(getValue);
+    });
 
 
     // Scroll to Bottom
